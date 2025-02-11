@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VandeAi - Home</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="VandeAi Logo">
+            <span>VandeAi</span>
+        </div>
+        <div class="top-right">
+            <a href="#" class="download-app">Download App</a>
+            <button class="language-toggle" onclick="toggleLanguage()">English</button>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <h2 id="hero-text">🚀 VandeAi is evolving! Explore early access and discover the future at chat.vandeai.com today!</h2>
+            <h1>VandeAi</h1>
+            <p id="subtext">Explore the frontier of AI innovation</p>
+        </section>
+        <section class="action-boxes">
+            <div class="action-box" onclick="window.open('SecondPage/Second.html', '_blank')">
+                <h3>Start Now</h3>
+                <p>Experience VandeAi in action.</p>
+            </div>
+            <div class="action-box" onclick="window.open('ai.html', '_blank')">
+                <h3>Discover More</h3>
+                <p>Learn about VandeAi’s capabilities.</p>
+            </div>
+        </section>
+        <section class="features">
+            <h2>Why VandeAi?</h2>
+            <p>Advanced AI technology, optimized for your needs.</p>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-logo">
+            <img src="images/logo.png" alt="VandeAi Logo" height="100" width="100">
+            <span>VandeAi</span>
+        </div>
+        <div class="social-links">
+            <a href="#"><img src="images/facebook.png" alt="facebook"></a>
+            <a href="#"><img src="images/twitter.png" alt="twitter"></a>
+            <a href="#"><img src="images/linkedin.png" alt="linked"></a>
+        </div>
+        <p>© 2025 VandeAi. All rights reserved.</p>
+        <p>© Bipin Yadav</p>
+    </footer>
+    <script src="script.js"></script>
+
+    <script>
+        // Language toggle function
+        function toggleLanguage() {
+            var languageButton = document.querySelector('.language-toggle');
+            var heroText = document.getElementById("hero-text");
+            var subtext = document.getElementById("subtext");
+
+            if (languageButton.innerText === "English") {
+                // Switch to Hindi
+                languageButton.innerText = "हिंदी";
+                heroText.innerHTML = "🚀 VandeAi विकासशील है! पहले उपयोग के लिए खोजें और भविष्य को आज ही chat.vandeai.com पर खोजें!";
+                subtext.innerHTML = "एआई नवाचार की सीमाओं को अनलॉक करें";
+            } else {
+                // Switch back to English
+                languageButton.innerText = "English";
+                heroText.innerHTML = "🚀 VandeAi is evolving! Explore early access and discover the future at chat.vandeai.com today!";
+                subtext.innerHTML = "Explore the frontier of AI innovation";
+            }
+        }
+    </script>
+</body>
+</html>
